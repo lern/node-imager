@@ -1,4 +1,11 @@
 
+0.1.5 / 2012-11-13 
+==================
+
+  * update example config and readme
+  * use streaming for s3
+  * use streams and remove file I/O
+
 0.1.4 / 2012-11-06 
 ==================
 
