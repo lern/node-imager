@@ -11,7 +11,9 @@ $ npm install imager
 ## Usage
 **You need to create imager configuration file with image variants and your storages**
 
-Checkout the example config file `imager-example.js` in the repo
+Checkout the example config file `imager-example.js` in the repo.
+
+**Note on S3**: It is recommended to provide the `region` option as per [knox](https://github.com/LearnBoost/knox#region). S3 supports [more options](https://github.com/LearnBoost/knox#client-creation-options), you can just provide them in the config.
 
 ```js
 var Imager = require('imager');
@@ -41,6 +43,7 @@ So if you have a variant, say `thumb`, then you can access the image by `cdnUri+
   above or provide a `default` variant.
 
 2. **Upload local images**
+
   ```js
   imager.upload(['/path/to/file'], function (err, cdnUri, files) {
     // do your stuff
@@ -69,7 +72,7 @@ So if you have a variant, say `thumb`, then you can access the image by `cdnUri+
 If you specify `debug: true` in the imager config, you can see the logs of uploaded / removed files.
 
 ## To-do's
-* <strike>Support amazon storage</strike>
+* <del>Support amazon storage</del>
 * Write more tests
 
 
